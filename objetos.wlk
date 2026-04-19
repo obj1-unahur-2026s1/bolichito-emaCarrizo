@@ -51,21 +51,41 @@ object pelota {
     method material() = cuero
 }
 
+// Objeto Biblioteca
+object biblioteca {
+    method peso() = 8000
+    method color() = verde
+    method material() = madera
+}
+
 // Objeto muñeco
 object muñeco {
     var peso = 100
     method peso() = peso
-    method nuevoPeso() {
-      
-    }
-    
-}
-
-// Objeto Persona 
-//Rosa: le gustan las cosas que pesan 2 kilos (o sea 2000 gramos) o menos.
-
-object rosa {
-    method leGusta(objeto){
-      return objeto.peso() <= 2000
+    method nuevoPeso(nuevoValor) {
+        peso = nuevoValor
     }
 }
+
+// Objeto Placa
+object placa {
+    var pesoActual = 0
+    var colorActual = rojo
+
+    method peso() = pesoActual
+    method color() = colorActual
+    method material() = cobre
+
+    method nuevoPeso(nuevoValor) {
+        pesoActual = nuevoValor 
+        }
+        
+    method nuevoColor(colorNuevo) { 
+        colorActual = colorNuevo 
+        }
+}
+
+
+
+
+
