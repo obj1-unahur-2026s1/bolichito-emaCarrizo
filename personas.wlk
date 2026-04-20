@@ -26,6 +26,8 @@ object luisa {
 // Juan: le gustan las cosas que, o bien son de un color que no es fuerte, o bien pesan entre 1200 y 1800 gramos.
 object juan {
     method leGusta(objeto) {
-        return objeto.color().esFuerte().not() || objeto.peso().between(1200, 1800)
+        return objeto.color().esFuerte().not() || 
+        objeto.peso().between(1200, 1800)
     }
 }
+

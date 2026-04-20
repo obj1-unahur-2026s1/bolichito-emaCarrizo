@@ -1,3 +1,4 @@
+
 // Objeto Colores
 object rojo {
     method esFuerte() = true
@@ -10,6 +11,9 @@ object celeste {
 }
 object pardo {
     method esFuerte() = false
+}
+object naranja {
+    method esFuerte() = true
 }
 
 
@@ -60,10 +64,12 @@ object biblioteca {
 
 // Objeto muñeco
 object muñeco {
-    var peso = 100
-    method peso() = peso
+    var pesoactual = 100
+    method peso() = pesoactual
+    method color() = celeste
+    method material() = vidrio
     method nuevoPeso(nuevoValor) {
-        peso = nuevoValor
+        pesoactual = nuevoValor
     }
 }
 
@@ -78,14 +84,44 @@ object placa {
 
     method nuevoPeso(nuevoValor) {
         pesoActual = nuevoValor 
-        }
+    }
         
     method nuevoColor(colorNuevo) { 
         colorActual = colorNuevo 
-        }
+    }
 }
 
+// Objetos agregados
+// Objeto Arito
+object arito {
+    method peso() = 180
+    method color() = celeste
+    method material() = cobre
+}
 
+// Objeto banquito
+object banquito {
+    var colorActual = naranja
 
+    method peso() = 1700
+    method color() = colorActual
+    method material() = madera
 
+    method colorACambiar(nuevoColor) {
+        colorActual = nuevoColor
+    }
+}
+
+// Objeto Cajita
+object cajita {
+    var contenidoObjeto = remera
+
+    method peso() = 400 + contenidoObjeto.peso()
+    method color() = rojo
+    method material() = cobre
+
+    method nuevoContenido(objetoNuevo) { 
+        contenidoObjeto = objetoNuevo 
+        }
+}
 
