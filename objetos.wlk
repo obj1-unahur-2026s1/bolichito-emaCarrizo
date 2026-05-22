@@ -125,3 +125,9 @@ object cajita {
         }
 }
 
+
+// prueba de push 
+object prueba {
+    method pruebaDePush{}
+}
+
